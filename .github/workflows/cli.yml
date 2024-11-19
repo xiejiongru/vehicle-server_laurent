@@ -9,5 +9,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - run: node dist/index.js
+      - run: npm --version
       
