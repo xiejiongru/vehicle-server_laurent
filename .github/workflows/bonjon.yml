@@ -5,12 +5,15 @@ on:
 jobs:
   dire_bonjour:
     runs-on: ubuntu-22.04
+    container:
+      image: ghcr.io/cicd-lectures/gitpod:latest
+      options: --user root
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-      - name: Install cowsay
-        run: sudo apt-get install cowsay
-      - name : affiche le répertoire
-        run: ls -l # Liste les fichier du répertoire courant
-      - name : ma vache affiche mon readme 
-        run: cat README.md | cowsay # Affiche le contenu du fichier `README.md` à la base du dépôt
+
+      - name : Affiche le répertoire
+        run: ls -l
+
+      - name : Ma vache affiche mon readme 
+        run: cat README.md | cowsay
