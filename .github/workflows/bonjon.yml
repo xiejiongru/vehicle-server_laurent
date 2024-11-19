@@ -12,7 +12,6 @@ jobs:
         id: readme
         with:
           path: ./README.md
-          run: echo "${{ steps.readfile.outputs.content }}"
       - name: output the message on actions result
         uses: Code-Hex/neo-cowsay-action@v1
         with:
