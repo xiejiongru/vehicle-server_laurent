@@ -10,7 +10,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
         with:
-          path: ./readme.md
+          path: ./README.md
           run: echo "${{ steps.readfile.outputs.content }}"
       - name: output the message on actions result
         uses: Code-Hex/neo-cowsay-action@v1
