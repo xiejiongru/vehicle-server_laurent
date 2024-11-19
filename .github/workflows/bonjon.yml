@@ -9,9 +9,11 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
-        id: readme
+      - name: Read package.json
+        id: package
+        uses: juliangruber/read-file-action@v1
         with:
-          path: ./README.md
+            path: ./README.md
       - name: output the message on actions result
         uses: Code-Hex/neo-cowsay-action@v1
         with:
